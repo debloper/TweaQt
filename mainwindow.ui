@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>257</width>
+    <width>244</width>
     <height>320</height>
    </rect>
   </property>
@@ -27,12 +27,12 @@
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <property name="margin">
-     <number>5</number>
+     <number>2</number>
     </property>
     <property name="spacing">
-     <number>5</number>
+     <number>2</number>
     </property>
-    <item row="0" column="0">
+    <item row="1" column="0">
      <widget class="QWebView" name="webView">
       <property name="minimumSize">
        <size>
@@ -48,19 +48,13 @@
         <string>http://twitter.com/Deblopper</string>
        </url>
       </property>
-      <property name="zoomFactor">
-       <double>0.800000011920929</double>
-      </property>
       <property name="renderHints">
        <set>QPainter::Antialiasing|QPainter::HighQualityAntialiasing|QPainter::SmoothPixmapTransform|QPainter::TextAntialiasing</set>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
+    <item row="8" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="spacing">
-       <number>10</number>
-      </property>
       <item>
        <widget class="QPushButton" name="pushButtonReload">
         <property name="sizePolicy">
@@ -96,7 +90,7 @@
       </item>
      </layout>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QProgressBar" name="progressBar">
       <property name="maximumSize">
        <size>
@@ -111,6 +105,42 @@
        <bool>false</bool>
       </property>
      </widget>
+    </item>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayoutUrl">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="lineEditUrl">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButtonGo">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Go!</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -136,8 +166,8 @@
      <y>218</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>282</y>
+     <x>171</x>
+     <y>290</y>
     </hint>
    </hints>
   </connection>
@@ -168,8 +198,8 @@
      <y>236</y>
     </hint>
     <hint type="destinationlabel">
-     <x>72</x>
-     <y>282</y>
+     <x>74</x>
+     <y>290</y>
     </hint>
    </hints>
   </connection>
