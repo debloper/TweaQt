@@ -203,5 +203,69 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButtonReload</sender>
+   <signal>clicked()</signal>
+   <receiver>webView</receiver>
+   <slot>reload()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>14</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonQuit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>243</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonTimeline</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEditUrl</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonTimeline</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonGo</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>203</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>

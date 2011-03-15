@@ -32,9 +32,6 @@ public:
     void setOrientation(ScreenOrientation orientation);
     void showExpanded();
 
-private slots:
-    void on_pushButtonQuit_clicked();
-
 private:
     Ui::MainWindow *ui;
 };

@@ -78,8 +78,3 @@ void MainWindow::showExpanded()
     show();
 #endif
 }
-
-void MainWindow::on_pushButtonQuit_clicked()
-{
-    close();
-}
