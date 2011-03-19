@@ -11,7 +11,7 @@ Changelogs
 ==========
 v0.0 - v0.1 :
 -------------
-* Loads http://twitter.com/Deblopper & shows his latest tweets.
+* Loads [@Deblopper](http://twitter.com/Deblopper) & shows his latest tweets.
 * Plays a clean, fullscreen interface.
 * Reloads the browser on request.
 * Quits the application on request.
