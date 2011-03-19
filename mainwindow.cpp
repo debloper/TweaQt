@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->qFrameUrl->setVisible(0);
 }
 
 MainWindow::~MainWindow()
