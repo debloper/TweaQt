@@ -32,6 +32,9 @@ public:
     void setOrientation(ScreenOrientation orientation);
     void showExpanded();
 
+private slots:
+    void changeTimeline();
+
 private:
     Ui::MainWindow *ui;
 };
