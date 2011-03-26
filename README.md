@@ -16,9 +16,23 @@ v0.0 - v0.1 :
 * Reloads the browser on request.
 * Quits the application on request.
 
+v0.1 - v0.2 :
+-------------
+* Default resolution is set to 320x480px.
+* Complete layout is reworked, many elements added ("Quit" removed).
+* Progress Bar notification added with appearance/disappearance logic.
+* Signal-Slots have been used heavily for inter-elemental behaviour/relations.
+* Fully functional URL Bar, with ability to hide/unhide.
+* URL Bar loads twitter handles as well as lists.
+  * Input _**TwitterHandle**_ to follow timeline of _**@TwitterHandle**_.
+  * Input _**TwitterHandle/ListName**_ for _**@TwitterHandle's ListName**_ list.
+* The interface can now configures element sizes to be Maximization friendly.
+* Version statement added and a few minor bug fixes.
+
 
 Upcoming Features
 =================
-* An URL-bar to navigate 'within' @twitter.
-* Nicer UI (customized Qt GUI defaults).
-* Seamless operation with larger screens.
+* Fix the existing identified minor bugs (signal-slots optimization)
+* Add Icon, Change Branding Strings, Use Registered AppID - Rebrand.
+* Customize the WebInterface to be smaller screen-friendly.
+* Fix the login associated change-in-page-display bugs.
