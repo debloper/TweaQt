@@ -14,12 +14,6 @@
    <string>TweaQt</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-     <horstretch>1</horstretch>
-     <verstretch>1</verstretch>
-    </sizepolicy>
-   </property>
    <layout class="QGridLayout" name="gridLayout">
     <property name="margin">
      <number>0</number>
