@@ -23,6 +23,12 @@ HEADERS += mainwindow.h
 FORMS += mainwindow.ui
 QT += webkit
 
+# Setting the application version
+VERSION = 0.2
+
+# Defines the preprocessor for the application version.
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+
 # Please do not modify the following two lines. Required for deployment.
 include(deployment.pri)
 qtcAddDeployment()

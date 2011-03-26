@@ -62,6 +62,18 @@
      <layout class="QHBoxLayout" name="hLayoutCommand">
       <item>
        <widget class="QPushButton" name="pushButtonReload">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
         <property name="text">
          <string>Reload</string>
         </property>
@@ -69,6 +81,18 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonStop">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
         <property name="text">
          <string>Stop</string>
         </property>
@@ -76,6 +100,18 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonTimeline">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
         <property name="text">
          <string>Timeline</string>
         </property>
@@ -83,6 +119,18 @@
       </item>
       <item>
        <widget class="QPushButton" name="pushButtonCancel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
         <property name="text">
          <string>Cancel</string>
         </property>
@@ -92,6 +140,12 @@
     </item>
     <item row="0" column="0">
      <widget class="QFrame" name="qFrameUrl">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>32</height>
+       </size>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
         <number>0</number>
@@ -109,7 +163,10 @@
           </font>
          </property>
          <property name="text">
-          <string>@</string>
+          <string>#!</string>
+         </property>
+         <property name="margin">
+          <number>2</number>
          </property>
         </widget>
        </item>
@@ -458,6 +515,22 @@
     <hint type="destinationlabel">
      <x>119</x>
      <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>webView</sender>
+   <signal>urlChanged(QUrl)</signal>
+   <receiver>lineEditUrl</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>11</y>
     </hint>
    </hints>
   </connection>
