@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>244</width>
-    <height>320</height>
+    <width>320</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -62,14 +62,15 @@
      <layout class="QHBoxLayout" name="hLayoutCommand">
       <item>
        <widget class="QPushButton" name="pushButtonReload">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
         <property name="text">
          <string>Reload</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonStop">
+        <property name="text">
+         <string>Stop</string>
         </property>
        </widget>
       </item>
@@ -81,15 +82,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButtonQuit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
+       <widget class="QPushButton" name="pushButtonCancel">
         <property name="text">
-         <string>Quit</string>
+         <string>Cancel</string>
         </property>
        </widget>
       </item>
@@ -227,22 +222,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButtonQuit</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>204</x>
-     <y>307</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>121</x>
-     <y>159</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>pushButtonTimeline</sender>
    <signal>clicked()</signal>
    <receiver>qFrameUrl</receiver>
@@ -255,6 +234,230 @@
     <hint type="destinationlabel">
      <x>121</x>
      <y>11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonStop</sender>
+   <signal>clicked()</signal>
+   <receiver>webView</receiver>
+   <slot>stop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>qFrameUrl</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonReload</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonReload</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonReload</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonStop</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonStop</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonStop</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonStop</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonReload</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonTimeline</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonTimeline</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>200</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonTimeline</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonCancel</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonCancel</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>pushButtonTimeline</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>467</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>200</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>webView</sender>
+   <signal>loadProgress(int)</signal>
+   <receiver>pushButtonReload</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>webView</sender>
+   <signal>loadProgress(int)</signal>
+   <receiver>pushButtonStop</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>webView</sender>
+   <signal>loadFinished(bool)</signal>
+   <receiver>pushButtonReload</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>webView</sender>
+   <signal>loadFinished(bool)</signal>
+   <receiver>pushButtonStop</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>467</y>
     </hint>
    </hints>
   </connection>

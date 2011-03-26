@@ -24,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->qFrameUrl->setVisible(0);
+    ui->pushButtonStop->setVisible (0);
+    ui->pushButtonCancel->setVisible (0);
     connect (ui->lineEditUrl, SIGNAL(returnPressed()), SLOT(changeTimeline()));
     connect (ui->pushButtonGo, SIGNAL(clicked()), SLOT(changeTimeline()));
 }
@@ -85,5 +87,5 @@ void MainWindow::showExpanded()
 void MainWindow::changeTimeline()
 {
     QString timeline = QString(ui->lineEditUrl->text());
-    ui->webView->load("http://twitter.com/" + timeline);
+    ui->webView->load("http://twitter.com/#!/" + timeline);
 }
